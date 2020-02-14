@@ -4,14 +4,26 @@
   width: 100%;
   border: 1px solid brown;
   min-height: calc(100vh - 40vh);
+
   color: azure;
   background-color: #2f538a;
   justify-content: center;
   text-align: center;
-}
-.App .Article {
-  flex: 1;
-  border: 1px solid yellow;
-}
 
-/*# sourceMappingURL=App.css.map */
+  .Article {
+    flex: 1;
+    border: 1px solid yellow;
+  }
+
+  .Nav {
+
+  }
+
+  .Aside {
+
+  }
+
+  .Footer {
+
+  }
+}

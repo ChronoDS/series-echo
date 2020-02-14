@@ -1,28 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Movie from "./components/Movie";
+import './App.scss';
 import {Header} from "./components/Header";
 
 function App() {
     return (
         <div className="App">
-            <Header/>
-            <Movie />
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+            <Header className="App-header">
+                Header Series Echo B-Ach:
+            </Header>
+            <article className='Article'>
+                Article
+            </article>
+            <nav>Nav</nav>
+            <aside>Aside</aside>
+            <footer>Footer</footer>
         </div>
     );
 }
