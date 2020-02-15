@@ -1,4 +1,5 @@
 import React from 'react'
+import './Movie.scss'
 
 export const Movie = ({
                           id,
@@ -12,19 +13,18 @@ export const Movie = ({
                       }) => {
 
     return (
-        <div>
-            Title: {title}
-            Year: {year}
-            Length: {length}
-            Rating: {rating} ({rating_votes} votes)
+        <div className='movie-card'>
+            <h3>{title}</h3>
+            {year ? <h4> Year: {year} </h4> : null}
+            {length ? <h5>Length: {length}</h5> : null}
+            {rating ? <h6>Rating: {rating} {rating_votes ? <span>({rating_votes} votes)</span> : null} </h6>  : null}
             <img
                 src={poster}
                 alt={title+'poster'}
-                height='200px'
-                width='200px'
+                height='150px'
+                width='150px'
             />
-            Plot: {plot}
-            Id: {id}
+            {plot ? <h6>Plot: {plot}</h6> : null}
         </div>
     )
 };
