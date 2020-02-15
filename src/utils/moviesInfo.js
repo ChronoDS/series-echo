@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const loadMovieInfo = (movie = 'inception') => {
+export const loadMovieInfo = (movieId = 'tt1375666') => {
     return axios.get(
-        'https://imdb-internet-movie-database-unofficial.p.rapidapi.com/film/tt1375666',
+        `https://imdb-internet-movie-database-unofficial.p.rapidapi.com/film/${movieId}`,
         {
             headers: {
                 "x-rapidapi-host": "imdb-internet-movie-database-unofficial.p.rapidapi.com",
@@ -19,9 +19,9 @@ export const loadMovieInfo = (movie = 'inception') => {
 };
 
 
-export const searchMovieData = (movie = 'inception') => {
+export const searchMovieData = (movieTitle = 'inception') => {
     return axios.get(
-        'https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/inception',
+        `https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/${movieTitle}`,
         {
             headers: {
                 "x-rapidapi-host": "imdb-internet-movie-database-unofficial.p.rapidapi.com",
