@@ -1,14 +1,11 @@
 import React from "react";
+import './Header.scss'
 
-export const Header = () => {
-
-    const handleDelete = (funcParameter1, funcParameter2) => {
-        // func body
-    };
+export const Header = (props) => {
 
     return (
-        <div>
-            Header Series Echo B-Ach:
+        <div className="Header">
+            {props.children}
         </div>
     )
 };
