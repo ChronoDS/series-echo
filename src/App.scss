@@ -1,29 +1,6 @@
 .App {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  border: 1px solid brown;
-  min-height: calc(100vh - 40vh);
-
   color: azure;
   background-color: #2f538a;
   justify-content: center;
   text-align: center;
-
-  .Article {
-    flex: 1;
-    border: 1px solid yellow;
-  }
-
-  .Nav {
-
-  }
-
-  .Aside {
-
-  }
-
-  .Footer {
-
-  }
 }

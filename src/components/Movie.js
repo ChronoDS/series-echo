@@ -1,16 +1,30 @@
 import React from 'react'
 
-class Movie extends React.Component {
+export const Movie = ({
+                          id,
+                          title,
+                          year,
+                          length,
+                          rating,
+                          rating_votes,
+                          poster,
+                          plot,
+                      }) => {
 
-    handleDelete = () => {};
-
-    render() {
-        return (
-            <div>
-                Movie Lord Of The Rings
-            </div>
-        )
-    }
-}
-
-export default Movie;
+    return (
+        <div>
+            Title: {title}
+            Year: {year}
+            Length: {length}
+            Rating: {rating} ({rating_votes} votes)
+            <img
+                src={poster}
+                alt={title+'poster'}
+                height='200px'
+                width='200px'
+            />
+            Plot: {plot}
+            Id: {id}
+        </div>
+    )
+};
