@@ -1,32 +1,25 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import './Board.scss'
 import {Movie} from "./Movie";
+import {watchList} from "../utils/watchList";
 import {loadMovieInfo, searchMovieData} from "../utils/moviesInfo";
 
 export const Board = props => {
-    const [movie, setMovie] = useState(undefined);
-    useEffect(() => {
-        // loadMovieInfo()
-        //     .then(value => {
-        //         console.log('loadMovieInfo: ', value);
-        //         setMovie(value);
-        //     });
-        searchMovieData('rick and morty')
-            .then(value => {
-                console.log('searchMovieData: ', value);
-                return value.titles[0].id
-                // setMovie(value);
-            })
-            .then(id => {
-                return loadMovieInfo(id)
-            })
-            .then(value => setMovie(value))
-    }, []);
+
+    // const loadData = item => searchMovieData(item)
+    //     .then(value => value.titles[0].id)
+    //     .then(id => loadMovieInfo(id))
+    //     .then(movie => {
+    //         // console.log('Bottom-line Media Data: ', movie);
+    //         return <Movie {...movie}/>
+    //     });
 
     return (
         <div className='Board'>
-            {props.children}
-            <Movie {...movie}/>
+            {watchList.map((show) => {
+                    return <Movie key={show.title} {...show}/>
+                }
+            )}
         </div>
     )
 };
